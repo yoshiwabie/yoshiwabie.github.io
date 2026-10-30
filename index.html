@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark">
-<title>Clarisse Anne Pingol | IT Student Portfolio</title>
-<meta name="description" content="Portfolio of Clarisse Anne Pingol, BSIT student specializing in Mobile and Web Application. PMI Project Management Ready and IT Specialist - Java certified.">
+<title>Clarisse Anne Pingol | IT &amp; Virtual Assistance Portfolio</title>
+<meta name="description" content="Portfolio of Clarisse Anne Pingol, Information Technology student showcasing web and mobile projects, technical support experience, project coordination, and virtual assistance skills.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Unbounded:wght@300;400;500&display=swap" rel="stylesheet">
@@ -332,7 +332,12 @@
   }
   @media (max-width: 680px) {
     .wrap { padding: 0 18px; }
-    .nav li:not(:last-child) { display: none; }
+    .nav .bar { gap: 12px; padding: 8px 14px; border-radius: 22px; }
+    .nav nav { min-width: 0; overflow-x: auto; scrollbar-width: none; }
+    .nav nav::-webkit-scrollbar { display: none; }
+    .nav ul { width: max-content; flex-wrap: nowrap; }
+    .nav li:not(:last-child) { display: block; }
+    .nav li a { padding: 7px 10px; font-size: 0.78rem; white-space: nowrap; }
     .nav .bar { padding-left: 18px; }
     .cert { grid-template-columns: 52px 1fr; gap: 16px; padding: 22px; }
     .cert .when { grid-column: 2; justify-self: start; }
@@ -398,12 +403,12 @@
     <span class="sparkle sp2" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 0c.8 6.4 3.2 9.6 12 12-8.8 2.4-11.2 5.6-12 12-.8-6.4-3.2-9.6-12-12 8.8-2.4 11.2-5.6 12-12z"/></svg></span>
     <span class="sparkle sp3" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 0c.8 6.4 3.2 9.6 12 12-8.8 2.4-11.2 5.6-12 12-.8-6.4-3.2-9.6-12-12 8.8-2.4 11.2-5.6 12-12z"/></svg></span>
     <div class="wrap">
-      <p class="eyebrow fade-in"><span class="pulse" aria-hidden="true"></span>BS Information Technology &middot; Mobile and Web Application</p>
+      <p class="eyebrow fade-in"><span class="pulse" aria-hidden="true"></span>Information Technology &middot; Virtual Assistance &middot; Digital Solutions</p>
       <h1 class="name" aria-label="Clarisse Anne Pingol">
         <span class="line"><span>Clarisse Anne</span></span>
         <span class="line"><span>Pingol</span></span>
       </h1>
-      <p class="intro fade-in">I'm an IT student at National University - Dasmari&ntilde;as who likes building things for the web and mobile, and keeping projects organized from plan to finish. Lately I <span class="swap" id="swap">build for the web</span>.</p>
+      <p class="intro fade-in">I'm an Information Technology student at National University - Dasmari&ntilde;as with interests in web and mobile development, technical support, and virtual assistance. I enjoy solving technical problems, organizing information and workflows, and creating practical digital solutions.</p>
       <div class="btns fade-in">
         <a class="btn btn-solid magnetic" href="#contact">Get in touch
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg>
@@ -680,7 +685,8 @@
           <a class="btn btn-solid magnetic" href="mailto:pingolclarisse@gmail.com">Send an email
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg>
           </a>
-          <a class="btn btn-line magnetic" href="https://github.com/yoshiwabie">GitHub</a>
+          <a class="btn btn-line magnetic" href="https://github.com/yoshiwabie" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="btn btn-line magnetic" href="https://www.linkedin.com/in/clarisse-pingol/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
       </div>
     </div>
@@ -755,19 +761,6 @@
     });
   }, { threshold: 0.6 });
   document.querySelectorAll('[data-count]').forEach(function (c) { cio.observe(c); });
-
-  /* Rotating phrase in the intro */
-  var swap = document.getElementById('swap');
-  var words = ['build for the web', 'build for mobile', 'plan and manage projects', 'set up and fix systems'];
-  var wi = 0;
-  setInterval(function () {
-    swap.classList.add('out');
-    setTimeout(function () {
-      wi = (wi + 1) % words.length;
-      swap.textContent = words[wi];
-      swap.classList.remove('out');
-    }, 420);
-  }, 3200);
 
   var fine = window.matchMedia('(pointer: fine)').matches;
 
